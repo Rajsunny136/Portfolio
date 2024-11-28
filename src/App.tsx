@@ -7,8 +7,12 @@ import Contact from "./components/Contact";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ProjectDetail from "./components/ProjectDetail";
-import "./Styles/App.css";
 import Skills from "./components/Skills";
+import Experience from "./components/Experience";
+import ChatWidget from "./components/ChatWidget";
+import ExperienceDetail from "./components/ExperienceDetail";
+import "./Styles/App.css";
+import NotFound from "./components/NotFound";
 
 const App: React.FC = () => {
   return (
@@ -17,19 +21,28 @@ const App: React.FC = () => {
         <Navbar />
         <Routes>
           {/* Main sections */}
-          <Route path="/" element={
+          <Route
+            path="/"
+            element={
               <>
                 <Header />
                 <About />
-                <Skills/>
+                <Experience />
+                <Skills />
+                <ChatWidget />
                 <Projects />
                 <Contact />
                 <Footer />
               </>
             }
           />
-          {/* Project detail page */}
+          {/* Individual routes */}
+          <Route path="/experience" element={<Experience />} />
+          <Route path="/experience/:id" element={<ExperienceDetail />} />
           <Route path="/project/:id" element={<ProjectDetail />} />
+
+          {/* 404 Not Found route */}
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
     </Router>

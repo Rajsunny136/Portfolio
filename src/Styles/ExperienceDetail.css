@@ -1,0 +1,170 @@
+/* Experience Card Styling */
+.experience-detail-card {
+  padding: 2rem 1rem;
+  color: #333; /* Dark text for readability */
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Subtle but modern shadow */
+  background-color: #ffffff;
+  text-align: center;
+  overflow: hidden;
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.company-logo img {
+  max-width: 60px;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+.experience-title-section {
+  flex-grow: 1;
+  text-align: left;
+}
+
+.experience-icon {
+  font-size: 3rem;
+  color: #4caf50; /* Soft green for the icon */
+  margin-bottom: 0.5rem;
+}
+
+.experience-title {
+  font-size: 2rem;
+  color: #1a202c; /* Dark gray for the title */
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.experience-company {
+  font-size: 1.25rem;
+  color: #ff9800; /* Orange for company name */
+  margin-bottom: 0.5rem;
+}
+
+.location {
+  font-size: 1rem;
+  color: #888;
+}
+
+.back-btn {
+  background-color: #ff9800;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  width: 100px;
+}
+
+.back-btn:hover {
+  background-color: #f57c00;
+}
+
+.toggle-details {
+  background-color: #8ecae6;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-top: 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.toggle-details:hover {
+  background-color: #4fa3d1;
+}
+
+.rating {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.share-btn {
+  background-color: #2a9d8f;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-top: 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.share-btn:hover {
+  background-color: #264653;
+}
+
+.experience-footer {
+  margin-top: 2rem;
+}
+
+/* Error Message */
+.experience-detail-error {
+  text-align: center;
+  color: #ef233c; /* Red for error message */
+  font-size: 1.25rem;
+  margin-top: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .experience-detail-card {
+    padding: 1.5rem;
+  }
+
+  .experience-title {
+    font-size: 1.75rem;
+  }
+
+  .experience-company {
+    font-size: 1.1rem;
+  }
+
+  .experience-content p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .experience-detail-card {
+    padding: 1rem;
+  }
+
+  .experience-title {
+    font-size: 1.5rem;
+  }
+
+  .experience-company {
+    font-size: 1rem;
+  }
+
+  .experience-content p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .experience-title {
+    font-size: 1.25rem;
+  }
+
+  .experience-company {
+    font-size: 0.95rem;
+  }
+
+  .experience-content p {
+    font-size: 0.85rem;
+  }
+}
