@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../Styles/Skills.css";
 
 interface Skill {
@@ -19,6 +19,26 @@ const skills: Skill[] = [
 ];
 
 const Skills: React.FC = () => {
+  const [progressLevels, setProgressLevels] = useState<number[]>(
+    Array(skills.length).fill(0)
+  );
+
+  useEffect(() => {
+    const intervals = skills.map((skill, index) => {
+      return setInterval(() => {
+        setProgressLevels((prev) => {
+          const newLevels = [...prev];
+          if (newLevels[index] < skill.level) {
+            newLevels[index] += 1; // Increment by 1
+          }
+          return newLevels;
+        });
+      }, 50); // Adjust speed of increment (lower is faster)
+    });
+
+    return () => intervals.forEach((interval) => clearInterval(interval));
+  }, []);
+
   return (
     <section className="skills-section">
       <h2 className="skills-title">Skills</h2>
@@ -27,12 +47,14 @@ const Skills: React.FC = () => {
           <div className="skill" key={index}>
             <div className="skill-header">
               <span className="skill-name">{skill.name}</span>
-              <span className="skill-level">{skill.level}%</span>
+              <span className="skill-level">{progressLevels[index]}%</span>
             </div>
             <div className="skill-bar">
               <div
                 className="skill-progress"
-                style={{ width: `${skill.level}%` }}
+                style={{
+                  ["--skill-level" as any]: `${skill.level}%`,
+                }}
               ></div>
             </div>
           </div>
