@@ -1,0 +1,23 @@
+.not-found {
+  text-align: center;
+  padding: 2rem;
+  color: var(--text-color);
+}
+
+.not-found h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.not-found p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.go-home {
+  padding: 0.5rem 1rem;
+  color: white;
+  background-color: var(--primary-color);
+  text-decoration: none;
+  border-radius: 5px;
+}

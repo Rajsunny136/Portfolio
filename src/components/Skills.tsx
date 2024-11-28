@@ -33,7 +33,7 @@ const Skills: React.FC = () => {
           }
           return newLevels;
         });
-      }, 50); // Adjust speed of increment (lower is faster)
+      }, 100.8); // Adjust speed of increment (lower is faster)
     });
 
     return () => intervals.forEach((interval) => clearInterval(interval));

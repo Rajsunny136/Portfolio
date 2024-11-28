@@ -36,17 +36,17 @@ const Navbar: React.FC = () => {
       </button>
       <ul className={`navbar-menu ${isMenuOpen ? "open" : "closed"}`}>
         <li>
-          <a href="#about" onClick={() => setIsMenuOpen(false)}>
+          <a href="about" onClick={() => setIsMenuOpen(false)}>
             About
           </a>
         </li>
         <li>
-          <a href="#projects" onClick={() => setIsMenuOpen(false)}>
+          <a href="projects" onClick={() => setIsMenuOpen(false)}>
             Projects
           </a>
         </li>
         <li>
-          <a href="#contact" onClick={() => setIsMenuOpen(false)}>
+          <a href="contact" onClick={() => setIsMenuOpen(false)}>
             Contact
           </a>
         </li>
