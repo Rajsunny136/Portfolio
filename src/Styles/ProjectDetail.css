@@ -1,0 +1,113 @@
+/* General Styles */
+.project-detail {
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 1200px; /* Ensures the content does not stretch too wide */
+}
+
+.project-detail h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.project-detail p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: white;
+}
+
+.professional-info {
+  background-color: #f8f8f8;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.professional-info h3 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.professional-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.professional-info li {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.professional-info strong {
+  font-weight: bold;
+}
+
+/* Loading Style */
+.loading {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 50px;
+  color: white;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  /* For tablet and mobile */
+  .project-detail {
+    padding: 10px;
+  }
+
+  .project-detail h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+
+  .project-detail p {
+    font-size: 1rem;
+  }
+
+  .professional-info {
+    padding: 15px;
+  }
+
+  .professional-info h3 {
+    font-size: 1.5rem;
+  }
+
+  .professional-info li {
+    font-size: 1rem;
+  }
+
+  .loading {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* For mobile devices */
+  .project-detail h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .project-detail p {
+    font-size: 0.9rem;
+  }
+
+  .professional-info {
+    padding: 10px;
+  }
+
+  .professional-info h3 {
+    font-size: 1.2rem;
+  }
+
+  .professional-info li {
+    font-size: 0.9rem;
+  }
+
+  .loading {
+    font-size: 1rem;
+  }
+}

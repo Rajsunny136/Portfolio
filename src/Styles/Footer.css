@@ -1,0 +1,91 @@
+/* Footer Styles */
+.footer {
+  /* background-color: #333; */
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Social Icons Container */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+  flex-wrap: wrap; /* Ensure icons wrap on small screens */
+}
+
+/* Social Icon Styles */
+.social-icon {
+  font-size: 2rem; /* Size of the icons */
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Individual Icon Colors */
+.social-icon.linkedin {
+  color: #0e76a8; /* LinkedIn Blue */
+}
+
+.social-icon.instagram {
+  color: #e4405f; /* Instagram Pink */
+}
+
+.social-icon.github {
+  color: #cfb2b2; /* GitHub Dark */
+}
+
+/* Hover Effects */
+.social-icon:hover {
+  transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+.social-icon.linkedin:hover {
+  color: #006fa6; /* Darker LinkedIn color */
+}
+
+.social-icon.instagram:hover {
+  color: #c13584; /* Darker Instagram color */
+}
+
+.social-icon.github:hover {
+  color: #444; /* Darker GitHub color */
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .social-icon {
+    font-size: 1.5rem; /* Smaller icons on mobile */
+  }
+  .social-icons {
+    gap: 10px; /* Reduced gap between icons */
+  }
+}
+
+/* Tablet Responsive */
+@media (max-width: 1024px) {
+  .social-icon {
+    font-size: 1.8rem; /* Adjusted icon size for tablet */
+  }
+  .social-icons {
+    gap: 12px; /* Slightly reduced gap */
+  }
+}
+
+/* Desktop and Larger Screens */
+@media (min-width: 1200px) {
+  .footer-container {
+    padding: 0 40px; /* Extra padding for large screens */
+  }
+  .social-icon {
+    font-size: 2.5rem; /* Larger icons for desktop */
+  }
+  .social-icons {
+    gap: 20px; /* Larger gap between icons */
+  }
+}

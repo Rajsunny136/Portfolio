@@ -1,0 +1,161 @@
+/* General Styles for About Section */
+
+.about {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1.2s ease-in-out; /* Animation added */
+}
+
+.about-image {
+  flex: 1;
+  /* max-width: 50%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: slideInFromLeft 1.5s ease-in-out; /* Animation added */
+  
+}
+
+.about-image img {
+  width: 90%;
+  height: 90%;
+  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  object-fit: cover;
+  border-radius: 30%;
+}
+
+.about-image img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.about-content {
+  flex: 1;
+  max-width: 50%;
+  text-align: left;
+  animation: slideInFromRight 1.5s ease-in-out; /* Animation added */
+}
+
+.about-content h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #e6e6e6;
+  animation: fadeIn 1.2s ease-in; /* Animation added */
+}
+
+.about-content p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #f3f2f2;
+  animation: fadeInUp 1.5s ease-in-out; /* Animation added */
+}
+
+.about-content .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1rem;
+  margin-top: 10px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  animation: fadeInUp 1.5s ease-in-out 0.2s; /* Delayed Animation */
+}
+
+.about-content .btn:hover {
+  background-color: #0056b3;
+  transform: translateY(-3px); /* Adds a hover "lift" effect */
+}
+
+/* Responsive Styles */
+
+@media (max-width: 576px) {
+  .about-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .about-image, .about-content {
+    max-width: 100%;
+  }
+
+  .about-content {
+    text-align: center;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .about-image, .about-content {
+    max-width: 100%;
+  }
+
+  .about-content {
+    text-align: center;
+  }
+}
+
+/* Keyframes for Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
